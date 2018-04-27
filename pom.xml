@@ -40,6 +40,10 @@
     </build>
     <properties>
         <spring.version>5.0.5.RELEASE</spring.version>
+        <spring.security.version>5.0.4.RELEASE</spring.security.version>
+        <hibernate.entitymanager.version>5.2.16.Final</hibernate.entitymanager.version>
+        <hibernate.c3p0.version>5.2.16.Final</hibernate.c3p0.version>
+        <c3p0.version>0.9.5.2</c3p0.version>
     </properties>
     <dependencies>
         <dependency>
@@ -47,11 +51,30 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.entitymanager.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${hibernate.c3p0.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-
     </dependencies>
 </project>
