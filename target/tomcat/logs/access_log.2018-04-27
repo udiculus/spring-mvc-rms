@@ -1,3 +1,0 @@
-0:0:0:0:0:0:0:1 - - [27/Apr/2018:14:04:10 +0700] "GET /springbasic/article/view?id=6 HTTP/1.1" 404 999 http-bio-8181-exec-1 37
-0:0:0:0:0:0:0:1 - - [27/Apr/2018:14:04:22 +0700] "GET /springbasic/ HTTP/1.1" 200 7082 http-bio-8181-exec-2 620
-0:0:0:0:0:0:0:1 - - [27/Apr/2018:14:04:22 +0700] "GET /springbasic/resources/css/style.css HTTP/1.1" 304 - http-bio-8181-exec-6 3

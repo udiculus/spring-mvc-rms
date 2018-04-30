@@ -8,6 +8,7 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Article</h1>
+        ${message}
         <c:choose>
             <c:when test="${sessionScope.uid != null}">
                 <p class="lead text-muted">Something short and leading about the article of any contents. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>

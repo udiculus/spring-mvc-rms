@@ -1,2 +1,14 @@
+com\mitrais\springmvc\config\SecurityWebApplicationInitializer.class
+com\mitrais\springmvc\model\Article.class
+com\mitrais\springmvc\model\User.class
+com\mitrais\springmvc\repository\UserRepo.class
+com\mitrais\springmvc\service\UserService.class
+com\mitrais\springmvc\config\WebSecurityConfig.class
+com\mitrais\springmvc\service\impl\UserServiceImpl.class
+com\mitrais\springmvc\config\AppConfig.class
+com\mitrais\springmvc\config\MvcWebApplicationInitializer.class
+com\mitrais\springmvc\controller\AuthController.class
+com\mitrais\springmvc\repository\impl\UserRepoImpl.class
 com\mitrais\springmvc\controller\ArticleController.class
-com\mitrais\springmvc\HelloWorld.class
+com\mitrais\springmvc\config\WebConfig.class
+com\mitrais\springmvc\model\Comment.class

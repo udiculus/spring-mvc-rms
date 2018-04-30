@@ -8,7 +8,7 @@ public class User {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int id;
 
     @Column(name = "username")
@@ -16,6 +16,9 @@ public class User {
 
     @Column(name = "password")
     protected String password;
+
+    @Column(name = "role_id")
+    protected String roleId;
 
     public User(int id, String username, String password) {
         this.id = id;

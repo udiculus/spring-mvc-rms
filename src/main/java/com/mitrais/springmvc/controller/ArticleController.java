@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ArticleController {
 
-    @RequestMapping("/")
+    @RequestMapping("/article")
     public ModelAndView homePage() {
         return new ModelAndView("index");
     }
