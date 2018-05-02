@@ -1,23 +1,24 @@
 package com.mitrais.springmvc.config;
 
-import com.mitrais.springmvc.model.Article;
-import com.mitrais.springmvc.model.Comment;
-import com.mitrais.springmvc.model.User;
+import java.util.Properties;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import java.util.Properties;
-
-import static org.hibernate.cfg.AvailableSettings.*;
+import static org.hibernate.cfg.Environment.*;
 
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScans(value={@ComponentScan("com.mitrais.springmvc.repository"), @ComponentScan("com.mitrais.springmvc.service")})
+@ComponentScans(value = { @ComponentScan("com.mitrais.springmvc.dao"),
+	      @ComponentScan("com.mitrais.springmvc.service") })
 public class AppConfig {
 
     @Autowired
@@ -47,7 +48,7 @@ public class AppConfig {
         props.put(C3P0_MAX_STATEMENTS, env.getProperty("hibernate.c3p0.max_statements"));
 
         factoryBean.setHibernateProperties(props);
-        factoryBean.setAnnotatedClasses(User.class);
+        factoryBean.setPackagesToScan("com.mitrais.springmvc.model");
 
         return factoryBean;
     }

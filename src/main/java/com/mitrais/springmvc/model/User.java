@@ -17,8 +17,8 @@ public class User {
     @Column(name = "password")
     protected String password;
 
-    @Column(name = "role_id")
-    protected String roleId;
+    @Column(name = "role_id", columnDefinition = "TINYINT")
+    protected int roleId;
 
     public User(int id, String username, String password) {
         this.id = id;
@@ -57,4 +57,13 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public int getRoleId() {
+    	return roleId;
+    }
+    
+    public void setRoleId(int roleId) {
+    	this.roleId = roleId;
+    }
+    
 }

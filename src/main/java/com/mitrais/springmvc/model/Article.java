@@ -9,38 +9,33 @@ public class Article {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    protected int id;
 
     @Column(name = "title")
     protected String title;
 
-    @Column(name = "content")
+    @Column(name = "content", length = 65535, columnDefinition="TEXT")
     protected String content;
 
-    @OneToMany(mappedBy = "articleId")
-    private Comment comments;
-
-    public Article(Long id, String title, String content, Comment comments) {
+    public Article(int id, String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.comments = comments;
     }
 
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
-        this.comments = comments;
     }
 
     public Article() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -58,14 +53,6 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public Comment getComments() {
-        return comments;
-    }
-
-    public void setComments(Comment comments) {
-        this.comments = comments;
     }
 }
 

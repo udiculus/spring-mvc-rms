@@ -1,18 +1,23 @@
 package com.mitrais.springmvc.controller;
 
+import com.mitrais.springmvc.model.Article;
+import com.mitrais.springmvc.service.ArticleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class AuthController {
 
-    @GetMapping("/")
-    public String index(Model model, Principal principal) {
-        model.addAttribute("message", "logged in as " + principal.getName());
+    @Autowired
+    private ArticleService articleService;
 
-        return "index";
+    @GetMapping("/")
+    public ModelAndView list() {
+        List<Article> articles = articleService.list();
+        return new ModelAndView("article/index", "listArticle", articles);
     }
 }

@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface ArticleDao {
 
-    long save(Article article);
+	int save(Article article);
 
-    Article get(long id);
+    Article get(int id);
 
     List<Article> list();
 
-    void update(Article article);
+    void update(int id, Article article);
 
-    void delete(long id);
+    void delete(int id);
 }

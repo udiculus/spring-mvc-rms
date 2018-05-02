@@ -21,7 +21,7 @@
                     <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="auth/logout">Sign Out</a></button>
                 </c:when>
                 <c:otherwise>
-                    <a class="navbar-brand d-flex align-items-center" href="auth/login"> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="auth/login">Sign In</a></button>
+                    <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="auth/login">Sign In</a></button>
                 </c:otherwise>
             </c:choose>
         </div>
