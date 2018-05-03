@@ -1,6 +1,9 @@
 package com.mitrais.springmvc.model;
 
+import com.sun.istack.internal.NotNull;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "articles")

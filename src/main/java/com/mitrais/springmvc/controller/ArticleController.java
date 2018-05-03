@@ -5,13 +5,15 @@ import com.mitrais.springmvc.service.ArticleService;
 
 import java.util.List;
 
+import com.mitrais.springmvc.validator.ArticleValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-
-@RestController
+@Controller
 public class ArticleController {
 
     @Autowired
@@ -36,30 +38,53 @@ public class ArticleController {
     }
 
     @GetMapping("/article/create")
-    public ModelAndView create() {
-        return new ModelAndView("article/create");
+    public ModelAndView create(ModelMap model) {
+        return new ModelAndView("article/create", "article", new Article());
     }
 
     @PostMapping("/article/create")
-    public ModelAndView insertArticle(@ModelAttribute("article") Article article) {
-        if (article.getTitle() != null) {
+    public String insertArticle(ModelMap model, @ModelAttribute("article") Article article, BindingResult result) {
+        ArticleValidator.Create validator = new ArticleValidator.Create();
+        validator.validate(article, result);
+
+        if (!result.hasErrors()) {
             System.out.println(article.getTitle());
             System.out.println(article.getContent());
             articleService.save(article);
+            return "redirect:/";
+        } else {
+            model.addAttribute("title", article.getTitle());
+            model.addAttribute("content", article.getContent());
+            return "/article/create";
         }
-        return new ModelAndView("article/create");
     }
 
     @PostMapping("/article/edit/{id}")
-    public ModelAndView updateArticle(@ModelAttribute("article") Article article, @PathVariable("id") int id) {
-        if (article.getId() > 0) {
+    public String updateArticle(ModelMap model, @ModelAttribute("article") Article article, BindingResult result) {
+        ArticleValidator.Update validator = new ArticleValidator.Update();
+        validator.validate(article, result);
+
+        if (!result.hasErrors()) {
+            System.out.println(article.getId());
             System.out.println(article.getTitle());
             System.out.println(article.getContent());
             articleService.update(article.getId(), article);
-            return new ModelAndView("article/edit", "article", article);
+            return "redirect:/";
         } else {
-            return new ModelAndView("redirect:/");
+            model.addAttribute("title", article.getTitle());
+            model.addAttribute("content", article.getContent());
+            return "/article/edit";
         }
+    }
+
+    @GetMapping("/article/delete/{id}")
+    public String deleteArticle(@PathVariable("id") int id) {
+        Article article = articleService.get(id);
+        if (article != null) {
+            articleService.delete(id);
+        }
+
+        return "redirect:/";
     }
 
 }

@@ -33,12 +33,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/view/${article.id}'">View</button>
-                                <c:choose>
-                                    <c:when test="${sessionScope.uid != null}">
-                                        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/edit/${article.id}'">Edit</button>
-                                        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/delete/${article.id}'">Delete</button>
-                                    </c:when>
-                                </c:choose>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/edit/${article.id}'">Edit</button>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/delete/${article.id}'">Delete</button>
                             </div><small class="text-muted">9 mins</small>
                         </div>
                     </div>
