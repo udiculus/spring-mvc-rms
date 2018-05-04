@@ -1,6 +1,7 @@
 package com.mitrais.springmvc.controller;
 
 import com.mitrais.springmvc.model.Article;
+import com.mitrais.springmvc.model.Comment;
 import com.mitrais.springmvc.service.ArticleService;
 
 import java.util.List;
@@ -26,9 +27,12 @@ public class ArticleController {
     }
 
     @GetMapping("/article/view/{id}")
-    public ModelAndView view(@PathVariable("id") int id) {
+    public String view(ModelMap modelMap, @PathVariable("id") int id) {
         Article article = articleService.get(id);
-        return new ModelAndView("article/view", "article", article);
+        List<Comment> comments = articleService.getComments();
+        modelMap.addAttribute("comments", comments);
+        modelMap.addAttribute("article", article);
+        return "article/view";
     }
 
     @GetMapping("/article/edit/{id}")

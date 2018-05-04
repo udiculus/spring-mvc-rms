@@ -1,9 +1,7 @@
 package com.mitrais.springmvc.model;
 
-import com.sun.istack.internal.NotNull;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Entity
 @Table(name = "articles")
@@ -19,6 +17,9 @@ public class Article {
 
     @Column(name = "content", length = 65535, columnDefinition="TEXT")
     protected String content;
+
+    @OneToMany(mappedBy = "articleId", cascade = CascadeType.MERGE)
+    protected List<Comment> comments;
 
     public Article(int id, String title, String content) {
         this.id = id;
@@ -56,6 +57,14 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
 
