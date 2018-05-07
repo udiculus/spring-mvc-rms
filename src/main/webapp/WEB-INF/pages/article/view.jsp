@@ -14,7 +14,13 @@
         </div>
         <div class="article-comments">
             <c:forEach var="comment" items="${comments}">
-                <div>${comment.comment}</div>
+                <div class="comment">
+                    <div class="user-image"></div>
+                    <div class="user-comment">
+                        <div class="comment-text">${comment.comment}</div>
+                        <div class="comment-time">${comment.createdAt}</div>
+                    </div>
+                </div>
             </c:forEach>
         </div>
     </div>

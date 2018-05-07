@@ -1,6 +1,7 @@
 package com.mitrais.springmvc.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -19,6 +20,10 @@ public class User {
 
     @Column(name = "role_id", columnDefinition = "TINYINT")
     protected int roleId;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id", nullable = false)
+    protected Role role;
 
     public User(int id, String username, String password) {
         this.id = id;
@@ -65,5 +70,12 @@ public class User {
     public void setRoleId(int roleId) {
     	this.roleId = roleId;
     }
-    
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

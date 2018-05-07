@@ -151,3 +151,28 @@ footer {
         display: inline-block;
     }
 }
+
+// article comments
+.article-comments {
+    .comment{
+        margin-bottom: 12px;
+        .user-image{
+            width: 50px;
+            height: 50px;
+            float: left;
+            background: #e4e7ea;
+        }
+        .user-comment{
+            margin-left: 65px;
+            .comment-text{
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+                margin-bottom: 10px;
+            }
+            .comment-time{
+                font-size: 0.8rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}

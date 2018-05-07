@@ -4,10 +4,12 @@ import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
 import com.mitrais.springmvc.service.ArticleService;
 
+import java.security.Principal;
 import java.util.List;
 
 import com.mitrais.springmvc.validator.ArticleValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -21,15 +23,16 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/article")
-    public ModelAndView list() {
-       List<Article> articles = articleService.list();
-       return new ModelAndView("article/index", "listArticle", articles);
+    public ModelAndView list(ModelMap model, Principal principal) {
+        model.addAttribute("message", "You are logged in as " + principal.getName());
+        List<Article> articles = articleService.list();
+        return new ModelAndView("article/index", "listArticle", articles);
     }
 
     @GetMapping("/article/view/{id}")
     public String view(ModelMap modelMap, @PathVariable("id") int id) {
         Article article = articleService.get(id);
-        List<Comment> comments = articleService.getComments();
+        List<Comment> comments = article.getComments();
         modelMap.addAttribute("comments", comments);
         modelMap.addAttribute("article", article);
         return "article/view";

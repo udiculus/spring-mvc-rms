@@ -18,7 +18,7 @@ public class Article {
     @Column(name = "content", length = 65535, columnDefinition="TEXT")
     protected String content;
 
-    @OneToMany(mappedBy = "articleId", cascade = CascadeType.MERGE)
+    @OneToMany(mappedBy = "articleId", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
     protected List<Comment> comments;
 
     public Article(int id, String title, String content) {

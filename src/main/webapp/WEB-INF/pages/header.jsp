@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <c:set var="req" value="${pageContext.request}" />
 <c:set var="url">${req.requestURL}</c:set>
 <c:set var="base" value="${fn:substring(url, 0, fn:length(url) - fn:length(req.requestURI))}${req.contextPath}/" />
@@ -16,14 +17,12 @@
 <header>
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-            <c:choose>
-                <c:when test="${sessionScope.uid != null}">
-                    <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="auth/logout">Sign Out</a></button>
-                </c:when>
-                <c:otherwise>
-                    <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="auth/login">Sign In</a></button>
-                </c:otherwise>
-            </c:choose>
+                <sec:authorize access="isAuthenticated()">
+                    <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="logout">Sign Out</a></button>
+                </sec:authorize>
+                <sec:authorize access="!isAuthenticated()">
+                    <a class="navbar-brand d-flex align-items-center" href=""> <strong>Spring MVC - CDC</strong></a> <a class="sign-in-btn" href="login">Sign In</a></button>
+                </sec:authorize>
         </div>
     </div>
 </header>

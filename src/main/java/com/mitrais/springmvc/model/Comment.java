@@ -71,4 +71,12 @@ public class Comment {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 }

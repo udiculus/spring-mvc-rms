@@ -4,6 +4,7 @@ import com.mitrais.springmvc.dao.ArticleDao;
 import com.mitrais.springmvc.dao.ArticleHqlDao;
 import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,10 +26,11 @@ public class ArticleServiceImpl implements ArticleService{
         return articleDao.save(article);
     }
 
+    @Transactional
     @Override
     public Article get(int id) {
         Article article = articleDao.get(id);
-        this.comments = article.getComments();
+        Hibernate.initialize(article.getComments());
         return article;
     }
 
