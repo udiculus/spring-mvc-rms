@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.mitrais.springmvc.validator.ArticleValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -30,7 +31,7 @@ public class ArticleController {
     }
 
     @GetMapping("/article/view/{id}")
-    public String view(ModelMap modelMap, @PathVariable("id") int id) {
+    public String view(ModelMap modelMap, @PathVariable("id") int id, @ModelAttribute("comment") Comment comment) {
         Article article = articleService.get(id);
         List<Comment> comments = article.getComments();
         modelMap.addAttribute("comments", comments);
@@ -45,6 +46,7 @@ public class ArticleController {
     }
 
     @GetMapping("/article/create")
+    @PreAuthorize("hasRole('ROLE_AUTHOR')")
     public ModelAndView create(ModelMap model) {
         return new ModelAndView("article/create", "article", new Article());
     }
@@ -64,6 +66,11 @@ public class ArticleController {
             model.addAttribute("content", article.getContent());
             return "/article/create";
         }
+    }
+
+    @PostMapping("/article/comment")
+    public String insertComment(ModelMap model, @ModelAttribute("comment") Comment comment, BindingResult result) {
+        return "redirect:/";
     }
 
     @PostMapping("/article/edit/{id}")

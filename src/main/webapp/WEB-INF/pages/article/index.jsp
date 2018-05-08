@@ -9,12 +9,11 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Articles</h1>
-        <sec:authorize access="hasRole('1')">
-            Lmaooooo
-        </sec:authorize>
         <sec:authorize access="isAuthenticated()">
             <p class="lead text-muted">Something short and leading about the article of any contents. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-            <p><a class="btn btn-primary my-2" href="article/create">Post a New Article</a></p>
+            <sec:authorize access="hasRole('ROLE_AUTHOR')">
+                <p><a class="btn btn-primary my-2" href="article/create">Post a New Article</a></p>
+            </sec:authorize>
         </sec:authorize>
         <sec:authorize access="!isAuthenticated()">
             <p class="lead text-muted">You need to login first to manage the articles</p>
@@ -35,7 +34,9 @@
                             <div class="btn-group">
                                 <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/view/${article.id}'">View</button>
                                 <sec:authorize access="isAuthenticated()">
-                                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/edit/${article.id}'">Edit</button>
+                                    <sec:authorize access="hasRole('ROLE_AUTHOR')">
+                                        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/edit/${article.id}'">Edit</button>
+                                    </sec:authorize>
                                     <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='article/delete/${article.id}'">Delete</button>
                                 </sec:authorize>
                             </div><small class="text-muted">9 mins</small>

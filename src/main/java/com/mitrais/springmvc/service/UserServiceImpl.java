@@ -2,6 +2,7 @@ package com.mitrais.springmvc.service;
 
 import com.mitrais.springmvc.dao.UserDao;
 import com.mitrais.springmvc.model.User;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,10 +28,9 @@ public class UserServiceImpl implements UserDetailsService {
         UserBuilder userBuilder = null;
         if (user != null) {
             userBuilder = org.springframework.security.core.userdetails.User.withUsername(username);
+            Hibernate.initialize(user.getRole());
             userBuilder.password(user.getPassword());
-            userBuilder.authorities(String.valueOf(user.getRoleId()));
-
-            System.out.println(String.valueOf(user.getRoleId()));
+            userBuilder.authorities(user.getRole().getAlias());
         } else {
             throw new UsernameNotFoundException("User not found");
         }

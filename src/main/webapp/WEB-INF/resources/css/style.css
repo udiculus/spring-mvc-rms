@@ -117,6 +117,16 @@ footer {
   font-size: 1.4rem;
   line-height: 3rem; }
 
+.form.form-comment {
+  width: 100%;
+  max-width: initial;
+  padding: 0;
+  margin-bottom: 20px; }
+  .form.form-comment button[type=submit] {
+    margin-top: 15px;
+    width: initial;
+    padding-left: 50px;
+    padding-right: 50px; }
 .form .error {
   font-size: 12px;
   font-style: italic;

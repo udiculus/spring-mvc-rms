@@ -5,10 +5,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
 @EnableWebMvc
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 @ComponentScan(basePackages = {"com.mitrais.springmvc.controller"})
 public class WebConfig implements WebMvcConfigurer {
 
@@ -16,12 +18,12 @@ public class WebConfig implements WebMvcConfigurer {
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.jsp().prefix("/WEB-INF/pages/").suffix(".jsp");
     }
-    
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    	registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
+        registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
     }
-    
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

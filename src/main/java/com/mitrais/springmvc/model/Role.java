@@ -13,6 +13,9 @@ public class Role {
     @Column(name = "role_name")
     protected String roleName;
 
+    @Column(name = "alias")
+    protected String alias;
+
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "role")
     protected User user;
 
@@ -37,5 +40,13 @@ public class Role {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 }
