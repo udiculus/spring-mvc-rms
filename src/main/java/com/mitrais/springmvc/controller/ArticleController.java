@@ -1,21 +1,28 @@
 package com.mitrais.springmvc.controller;
 
+import com.google.gson.Gson;
 import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
+import com.mitrais.springmvc.model.response.CommentResponse;
 import com.mitrais.springmvc.service.ArticleService;
 
 import java.security.Principal;
+import java.util.HashMap;
 import java.util.List;
 
 import com.mitrais.springmvc.validator.ArticleValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
 
 @Controller
 public class ArticleController {
@@ -68,9 +75,36 @@ public class ArticleController {
         }
     }
 
-    @PostMapping("/article/comment")
-    public String insertComment(ModelMap model, @ModelAttribute("comment") Comment comment, BindingResult result) {
-        return "redirect:/";
+    @ResponseBody
+    @RequestMapping(value = "/article/comment", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String insertComment(@ModelAttribute("comment") Comment comment, BindingResult result) {
+        ArticleValidator.PostComment validator = new ArticleValidator.PostComment();
+        validator.validate(comment, result);
+        CommentResponse commentResponse = new CommentResponse();
+        Gson gson = new Gson();
+
+        if (!result.hasErrors()) {
+            commentResponse.setErrorcode(0);
+            commentResponse.setMessage("Comment has been saved");
+            comment.setUserId(1);
+            articleService.postComment(comment);
+
+            String json = gson.toJson(commentResponse);
+            return json;
+        } else {
+            commentResponse.setErrorcode(1000);
+            commentResponse.setMessage("Error saving user's comment");
+
+            List<FieldError> errors = result.getFieldErrors();
+            HashMap<String, String> formError = new HashMap<String, String>();
+            for (FieldError error : errors ) {
+                formError.put(error.getObjectName(), error.getDefaultMessage());
+            }
+            commentResponse.setFormError(formError);
+
+            String json = gson.toJson(commentResponse);
+            return json;
+        }
     }
 
     @PostMapping("/article/edit/{id}")

@@ -15,7 +15,7 @@
         </div>
         <div class="article-post-comment">
             <form:form class="form form-comment" method="POST" action="article/comment" modelAttribute="comment" id="form_comment">
-                <form:input path="articleId" type="hidden"/>
+                <form:input path="articleId" type="hidden" value="${article.id}"/>
                 <form:textarea class="form-control" id="comment" path="comment" placeholder="What's on your mind..."></form:textarea>
                 <button class="btn btn-md btn-primary btn-block" type="submit">Post Comment</button>
             </form:form>
@@ -37,7 +37,21 @@
  $(document).ready(function(){
     $("#form_comment").bind("submit", function(e){
         e.preventDefault();
-        console.log("LMAO");
+        var $this = $(this);
+
+        $.ajax({
+            url: 'article/comment',
+            data: $this.serializeArray(),
+            dataType: 'JSON',
+            type: 'POST',
+            success: function(data) {
+                console.log(data);
+                console.log("Finished...");
+            },
+            beforeSend: function() {
+                console.log("Preparing...");
+            }
+        });
     })
  });
 </script>

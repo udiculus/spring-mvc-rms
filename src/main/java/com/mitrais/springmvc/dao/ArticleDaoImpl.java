@@ -32,11 +32,6 @@ public class ArticleDaoImpl implements ArticleDao{
     }
 
     @Override
-    public List<Comment> getWithComments(int id) {
-        return sessionFactory.getCurrentSession().get(Article.class, id).getComments();
-    }
-
-    @Override
     public List<Article> list() {
         Session session = sessionFactory.getCurrentSession();
         CriteriaBuilder cb = session.getCriteriaBuilder();
@@ -61,5 +56,11 @@ public class ArticleDaoImpl implements ArticleDao{
         Session session = sessionFactory.getCurrentSession();
         Article article = session.byId(Article.class).load(id);
         session.delete(article);
+    }
+
+    @Override
+    public int postComment(Comment comment) {
+        sessionFactory.getCurrentSession().save(comment);
+        return comment.getId();
     }
 }

@@ -1,6 +1,7 @@
 package com.mitrais.springmvc.validator;
 
 import com.mitrais.springmvc.model.Article;
+import com.mitrais.springmvc.model.Comment;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -43,6 +44,21 @@ public class ArticleValidator {
             if (article.getTitle().length() <= 10) {
                 errors.rejectValue("title", "title.max10");
             }
+        }
+    }
+
+    public static class PostComment implements Validator {
+        @Override
+        public boolean supports(Class<?> clazz) {
+            return false;
+        }
+
+        @Override
+        public void validate(Object target, Errors errors) {
+            Comment comment = (Comment) target;
+
+            ValidationUtils.rejectIfEmptyOrWhitespace(errors, "articleId", "required", "Article ID must not empty");
+            ValidationUtils.rejectIfEmptyOrWhitespace(errors, "comment", "required", "Comment field is required");
         }
     }
 

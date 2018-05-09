@@ -7,7 +7,7 @@
         <form action='<spring:url value="/loginAction"/>' method="post">
             <div class="text-center mb-4">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-                <p>Put username with 'admin' and password with 'admin123'.</p>
+                <p>Put username and password with <br/>'admin' and 'admin123' or 'author' and 'author123'</p>
                 <c:if test="${not empty sessionScope.message}">
                     <span style="color:green"><c:out value="${sessionScope.message}"/></span>
                     <c:remove var="message" scope="session" />

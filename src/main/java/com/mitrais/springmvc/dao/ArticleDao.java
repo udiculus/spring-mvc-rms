@@ -11,11 +11,11 @@ public interface ArticleDao {
 
     Article get(int id);
 
-    List<Comment> getWithComments(int id);
-
     List<Article> list();
 
     void update(int id, Article article);
 
     void delete(int id);
+
+    int postComment(Comment comment);
 }

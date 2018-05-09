@@ -35,11 +35,6 @@ public class ArticleServiceImpl implements ArticleService{
     }
 
     @Override
-    public List<Comment> getWithComments(int id) {
-        return articleDao.getWithComments(id);
-    }
-
-    @Override
     public List<Comment> getComments() {
         return this.comments;
     }
@@ -59,6 +54,12 @@ public class ArticleServiceImpl implements ArticleService{
     @Override
     public void delete(int id) {
         articleDao.delete(id);
+    }
+
+    @Transactional
+    @Override
+    public int postComment(Comment comment) {
+        return articleDao.postComment(comment);
     }
 
 }

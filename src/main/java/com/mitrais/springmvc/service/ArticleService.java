@@ -11,8 +11,6 @@ public interface ArticleService {
 
     Article get(int id);
 
-    List<Comment> getWithComments(int id);
-
     List<Comment> getComments();
 
     List<Article> list();
@@ -20,5 +18,7 @@ public interface ArticleService {
     void update(int id, Article article);
 
     void delete(int id);
+
+    int postComment(Comment comment);
 
 }
