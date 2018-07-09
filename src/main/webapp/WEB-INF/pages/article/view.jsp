@@ -25,14 +25,19 @@
                 <div class="comment">
                     <div class="user-image"></div>
                     <div class="user-comment">
+                        <div class="comment-meta">
+                            <div class="comment-posted-by">${comment.user.username}</div>
+                            <div class="comment-time">${comment.createdAt}</div>
+                        </div>
                         <div class="comment-text">${comment.comment}</div>
-                        <div class="comment-time">${comment.createdAt}</div>
                     </div>
                 </div>
             </c:forEach>
         </div>
     </div>
 </div>
+<script id="template-comment" type="text/x-tmpl">
+</script>
 <script>
  $(document).ready(function(){
     $("#form_comment").bind("submit", function(e){

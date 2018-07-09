@@ -31,6 +31,10 @@ public class Comment {
     @JoinColumn(name = "article_id", referencedColumnName = "id", insertable = false, updatable = false)
     protected Article articles;
 
+    @ManyToOne(cascade = CascadeType.ALL, targetEntity = User.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    protected User user;
+
     public Comment(int articleId, int userId, String comment) {
         this.articleId = articleId;
         this.userId = userId;
@@ -78,5 +82,13 @@ public class Comment {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

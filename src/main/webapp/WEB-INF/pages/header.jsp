@@ -13,6 +13,7 @@
     <link href="resources/css/style.css" rel="stylesheet"/>
     <script src="resources/js/jquery-3.3.1.min.js"></script>
     <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/tmpl.min.js"></script>
 </head>
 <body>
 <header>

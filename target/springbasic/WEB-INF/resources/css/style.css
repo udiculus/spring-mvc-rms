@@ -117,4 +117,48 @@ footer {
   font-size: 1.4rem;
   line-height: 3rem; }
 
+.form.form-comment {
+  width: 100%;
+  max-width: initial;
+  padding: 0;
+  margin-bottom: 20px; }
+  .form.form-comment button[type=submit] {
+    margin-top: 15px;
+    width: initial;
+    padding-left: 50px;
+    padding-right: 50px; }
+.form .error {
+  font-size: 12px;
+  font-style: italic;
+  color: #e43d08;
+  margin-left: 2px;
+  margin-top: 2px;
+  display: inline-block; }
+
+.article-comments .comment {
+  margin-bottom: 20px; }
+  .article-comments .comment .user-image {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: #de5f39;
+    border-radius: 4px; }
+  .article-comments .comment .user-comment {
+    margin-left: 52px; }
+    .article-comments .comment .user-comment .comment-text {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-top: 4px; }
+    .article-comments .comment .user-comment .comment-meta {
+      line-height: 1rem; }
+      .article-comments .comment .user-comment .comment-meta .comment-time {
+        display: inline-block;
+        margin-left: 4px;
+        font-size: 0.8rem;
+        color: #a9a9a9; }
+      .article-comments .comment .user-comment .comment-meta .comment-posted-by {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1rem; }
+
 /*# sourceMappingURL=style.css.map */

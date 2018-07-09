@@ -56,8 +56,6 @@ public class CommentResponse {
         this.data = data;
     }
 
-
-
     public class Data {
 
         @SerializedName("comment_id")

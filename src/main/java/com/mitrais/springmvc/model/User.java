@@ -1,6 +1,7 @@
 package com.mitrais.springmvc.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -24,6 +25,9 @@ public class User {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id", nullable = false)
     protected Role role;
+
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    protected List<Comment> comments;
 
     public User(int id, String username, String password) {
         this.id = id;
@@ -77,5 +81,13 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

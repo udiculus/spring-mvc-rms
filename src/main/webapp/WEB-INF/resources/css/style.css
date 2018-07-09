@@ -136,20 +136,29 @@ footer {
   display: inline-block; }
 
 .article-comments .comment {
-  margin-bottom: 12px; }
+  margin-bottom: 20px; }
   .article-comments .comment .user-image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     float: left;
-    background: #e4e7ea; }
+    background: #de5f39;
+    border-radius: 4px; }
   .article-comments .comment .user-comment {
-    margin-left: 65px; }
+    margin-left: 52px; }
     .article-comments .comment .user-comment .comment-text {
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.2rem;
-      margin-bottom: 10px; }
-    .article-comments .comment .user-comment .comment-time {
-      font-size: 0.8rem;
-      line-height: 1.4rem; }
+      margin-top: 4px; }
+    .article-comments .comment .user-comment .comment-meta {
+      line-height: 1rem; }
+      .article-comments .comment .user-comment .comment-meta .comment-time {
+        display: inline-block;
+        margin-left: 4px;
+        font-size: 0.8rem;
+        color: #a9a9a9; }
+      .article-comments .comment .user-comment .comment-meta .comment-posted-by {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
