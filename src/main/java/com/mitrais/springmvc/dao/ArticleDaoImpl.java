@@ -38,6 +38,7 @@ public class ArticleDaoImpl implements ArticleDao{
         CriteriaQuery<Article> cq = cb.createQuery(Article.class);
         Root<Article> root = cq.from(Article.class);
         cq.select(root);
+        cq.orderBy(cb.desc(root.get("id")));
         Query<Article> query = session.createQuery(cq);
         return query.getResultList();
     }

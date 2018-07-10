@@ -4,14 +4,17 @@ import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
 import com.mitrais.springmvc.model.response.ArticleDetailResponse;
 import com.mitrais.springmvc.model.response.ArticleResponse;
+import com.mitrais.springmvc.model.response.FormResponse;
 import com.mitrais.springmvc.service.ArticleService;
+import com.mitrais.springmvc.validator.ArticleValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -62,6 +65,55 @@ public class RestArticleController {
         ArticleDetailResponse response = new ArticleDetailResponse();
         response.setData(data);
         response.setMessage("Ok");
+
+        return response;
+    }
+
+    @RequestMapping(value = "/api/article/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public FormResponse create(@ModelAttribute("article") Article article, BindingResult result) {
+        FormResponse response = new FormResponse();
+        ArticleValidator.Create validator = new ArticleValidator.Create();
+        validator.validate(article, result);
+
+        if (!result.hasErrors()) {
+            articleService.save(article);
+            response.setErrorcode(0);
+            response.setMessage("Ok");
+            System.out.println("Successfully created the article...");
+        } else {
+            HashMap<String, String> formError = new HashMap<String, String>();
+            System.out.println("Failed to update the article...");
+            for (FieldError errors : result.getFieldErrors()) {
+                formError.put(errors.getField(), errors.getDefaultMessage());
+            }
+            response.setMessage("Failed");
+            response.setErrorcode(1000);
+            response.setFormError(formError);
+        }
+
+        return response;
+    }
+
+    @RequestMapping(value = "/api/article/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public FormResponse update(@ModelAttribute("article") Article article, BindingResult result) {
+        FormResponse response = new FormResponse();
+        ArticleValidator.Update validator = new ArticleValidator.Update();
+        validator.validate(article, result);
+
+        if (!result.hasErrors()) {
+            articleService.update(article.getId(), article);
+            response.setMessage("Ok");
+            System.out.println("Successfully updated the article...");
+        } else {
+            HashMap<String, String> formError = new HashMap<String, String>();
+            System.out.println("Failed to update the article...");
+            for (FieldError errors : result.getFieldErrors()) {
+                formError.put(errors.getField(), errors.getDefaultMessage());
+            }
+            response.setMessage("Failed");
+            response.setErrorcode(1000);
+            response.setFormError(formError);
+        }
 
         return response;
     }

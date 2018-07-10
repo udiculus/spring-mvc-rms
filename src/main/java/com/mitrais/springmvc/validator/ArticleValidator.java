@@ -21,8 +21,8 @@ public class ArticleValidator {
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "title", "required", "Title field is required");
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "content", "required", "Content field is required");
 
-            if (article.getTitle().length() <= 5) {
-                errors.rejectValue("title", "title.max5");
+            if (article.getTitle().length() < 5) {
+                errors.rejectValue("title", "title.max5", "Title should contain atleast 5 characters");
             }
         }
     }
@@ -41,8 +41,8 @@ public class ArticleValidator {
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "title", "required", "Title field is required");
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "content", "required", "Content field is required");
 
-            if (article.getTitle().length() <= 10) {
-                errors.rejectValue("title", "title.max10");
+            if (article.getTitle().length() > 150) {
+                errors.rejectValue("title", "title.max150", "Title should not larger than 150 characters");
             }
         }
     }
