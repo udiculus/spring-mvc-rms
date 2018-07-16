@@ -1,10 +1,10 @@
-package com.mitrais.springmvc.dao;
+package com.mitrais.springmvc.repository;
 
 import com.mitrais.springmvc.model.Article;
 
 import java.util.List;
 
-public interface ArticleHqlDao {
+public interface ArticleHqlRepository {
 
     int save(Article article);
 

@@ -117,4 +117,18 @@ public class RestArticleController {
 
         return response;
     }
+
+    @RequestMapping(value = "/api/article/delete/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public FormResponse delete(@PathVariable("id") int id) {
+        FormResponse response = new FormResponse();
+        Article article = articleService.get(id);
+        if (article != null) {
+            articleService.delete(id);
+        }
+
+        response.setMessage("Ok");
+        System.out.println("Successfully deleted the article...");
+
+        return response;
+    }
 }

@@ -1,52 +1,42 @@
 package com.mitrais.springmvc.model;
 
+import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "roles")
 public class Role {
-
     @Id
-    @Column(name = "id", columnDefinition = "TINYINT")
-    protected int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name = "role_name")
-    protected String roleName;
-
-    @Column(name = "alias")
-    protected String alias;
-
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "role")
-    protected User user;
+    @Enumerated(EnumType.STRING)
+    @NaturalId
+    @Column(length = 60)
+    private RoleName name;
 
     public Role() {
+
     }
 
-    public Role(String roleName) {
-        this.roleName = roleName;
+    public Role(RoleName name) {
+        this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public RoleName getName() {
+        return name;
     }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setName(RoleName name) {
+        this.name = name;
     }
 
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
 }

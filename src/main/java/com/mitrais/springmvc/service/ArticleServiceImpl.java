@@ -1,7 +1,6 @@
 package com.mitrais.springmvc.service;
 
-import com.mitrais.springmvc.dao.ArticleDao;
-import com.mitrais.springmvc.dao.ArticleHqlDao;
+import com.mitrais.springmvc.repository.ArticleRepository;
 import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
 import org.hibernate.Hibernate;
@@ -18,7 +17,7 @@ public class ArticleServiceImpl implements ArticleService{
     private List<Comment> comments;
 
     @Autowired
-    private ArticleDao articleDao;
+    private ArticleRepository articleDao;
 
     @Transactional
     @Override

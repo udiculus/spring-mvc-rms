@@ -1,6 +1,6 @@
 package com.mitrais.springmvc.service;
 
-import com.mitrais.springmvc.dao.UserDao;
+import com.mitrais.springmvc.repository.UserRepository;
 import com.mitrais.springmvc.model.User;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +17,14 @@ import org.springframework.security.core.userdetails.User.UserBuilder;
 public class UserServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
 
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        User user = userDao.findUserByUsername(username);
+        User user = userRepository.findUserByUsername(username);
         UserBuilder userBuilder = null;
         if (user != null) {
             userBuilder = org.springframework.security.core.userdetails.User.withUsername(username);

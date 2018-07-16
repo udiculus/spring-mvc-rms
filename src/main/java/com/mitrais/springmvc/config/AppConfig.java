@@ -17,7 +17,7 @@ import static org.hibernate.cfg.Environment.*;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScans(value = { @ComponentScan("com.mitrais.springmvc.dao"),
+@ComponentScans(value = { @ComponentScan("com.mitrais.springmvc.repository"),
 	      @ComponentScan("com.mitrais.springmvc.service") })
 public class AppConfig {
 

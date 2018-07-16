@@ -1,4 +1,4 @@
-package com.mitrais.springmvc.dao;
+package com.mitrais.springmvc.repository;
 
 import com.mitrais.springmvc.model.Article;
 import org.hibernate.Session;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ArticleHqlDaoImpl implements ArticleHqlDao {
+public class ArticleHqlRepositoryImpl implements ArticleHqlRepository {
 
     @Autowired
     private SessionFactory sessionFactory;
