@@ -1,7 +1,5 @@
 package com.mitrais.springmvc.controller;
 
-import com.mitrais.springmvc.model.Article;
-import com.mitrais.springmvc.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -18,11 +16,9 @@ import java.util.List;
 @Controller
 public class AuthController {
 
-    @Autowired
-    private ArticleService articleService;
 
     @GetMapping("/")
-    public ModelAndView list(ModelMap model, Principal principal) {
+    public String list(ModelMap model, Principal principal) {
         if (principal != null) {
             model.addAttribute("message", "You are logged in as " + principal.getName());
             System.out.println(principal.getName());
@@ -31,7 +27,6 @@ public class AuthController {
         System.out.println(authorities);
         // Generate password
         System.out.println(new BCryptPasswordEncoder().encode("author123"));
-        List<Article> articles = articleService.list();
-        return new ModelAndView("article/index", "listArticle", articles);
+        return "asd";
     }
 }

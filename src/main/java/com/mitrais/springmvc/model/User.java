@@ -1,6 +1,5 @@
 package com.mitrais.springmvc.model;
 
-import com.mitrais.springmvc.model.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -18,7 +17,7 @@ import java.util.Set;
             "email"
         })
 })
-public class User extends DateAudit {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
