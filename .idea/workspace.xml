@@ -2,209 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216b0284-e92a-47a7-bd41-7d7eea5763af" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/PersistenceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/JwtAuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserIdentityAvailability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/default-roles.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_unknown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_c3p0_5_2_16_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_16_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_8_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/ResponseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleDetailResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/CommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/FormResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/validator/ArticleValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dump20180716-article.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringMVCBasic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringMVCBasic.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/MvcWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/MvcWebApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/ArticleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/DateAudit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/UserDateAudit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/ArticleDetailResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/ArticleResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/CommentResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/FormResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleHqlRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleHqlRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/validator/ArticleValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/MvcWebApplicationInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/MvcWebApplicationInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/SecurityWebApplicationInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/SecurityWebApplicationInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/ArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/rest/RestArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/ArticleDetailResponse$Comments.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/ArticleDetailResponse$Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/ArticleDetailResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/ArticleResponse$Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/ArticleResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/CommentResponse$Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/CommentResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/model/response/FormResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/ArticleHqlRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/ArticleHqlRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/ArticleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/ArticleRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/repository/UserRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/ArticleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/ArticleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/validator/ArticleValidator$Create.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/validator/ArticleValidator$PostComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/validator/ArticleValidator$Update.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/validator/ArticleValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.mitrais/springbasic/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.mitrais/springbasic/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.mitrais/springbasic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.mitrais/springbasic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/config/AppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/config/MvcWebApplicationInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/config/SecurityWebApplicationInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/config/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/controller/ArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/ArticleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/ArticleDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/ArticleHqlDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/ArticleHqlDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/dao/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/response/CommentResponse$Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/model/response/CommentResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/service/ArticleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/service/ArticleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/service/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/validator/ArticleValidator$Create.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/validator/ArticleValidator$PostComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/validator/ArticleValidator$Update.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/com/mitrais/springmvc/validator/ArticleValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/classes/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/c3p0-0.9.5.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/gson-2.8.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/hibernate-c3p0-5.2.16.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/hibernate-core-5.2.16.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/hibernate-validator-6.0.9.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/javassist-3.22.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jaxb-api-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jsp-api-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/jstl-api-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/mchange-commons-java-0.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/mysql-connector-java-6.0.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/servlet-api-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-aop-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-beans-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-context-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-core-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-expression-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-jcl-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-jdbc-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-orm-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-security-acl-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-security-config-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-security-core-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-security-taglibs-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-security-web-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-tx-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-web-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/spring-webmvc-5.0.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/article/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/article/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/article/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/article/view.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/pages/welcome.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/js/tmpl.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springbasic/WEB-INF/resources/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/JwtAuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/JwtAuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/request/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserIdentityAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserIdentityAvailability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/PersistenceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/config/PersistenceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/rest/RestAuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/controller/rest/RestAuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/ApiResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/JwtAuthenticationResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/SignUpRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/UserIdentityAvailability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/UserProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/payload/UserSummary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtAuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mitrais/springmvc/security/JwtTokenProvider.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -218,7 +53,170 @@
     <favorites_list name="SpringMVCBasic" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="ArticleServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#1145#1146#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestArticleController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4475#4491#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserPrincipal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/UserPrincipal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1169">
+              <caret line="77" column="37" lean-forward="true" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1944#1945#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1057#1058#0" expanded="true" />
+                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1125#1126#0" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1317#1318#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1557#1558#0" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1958#1959#0" expanded="true" />
+                <element signature="e#1985#1986#0" expanded="true" />
+                <element signature="e#2023#2024#0" expanded="true" />
+                <element signature="e#2055#2056#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="35" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1290#1291#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
+                <element signature="e#1441#1442#0" expanded="true" />
+                <element signature="e#1488#1489#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1589#1590#0" expanded="true" />
+                <element signature="e#1630#1631#0" expanded="true" />
+                <element signature="e#1666#1667#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1730#1731#0" expanded="true" />
+                <element signature="e#1776#1777#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1857#1858#0" expanded="true" />
+                <element signature="e#1889#1890#0" expanded="true" />
+                <element signature="e#1946#1947#0" expanded="true" />
+                <element signature="e#1988#1989#0" expanded="true" />
+                <element signature="e#2017#2018#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2082#2083#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -230,8 +228,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getWithComments</find>
-      <find>security</find>
       <find>userser</find>
       <find>tag</find>
       <find>message</find>
@@ -260,6 +256,8 @@
       <find>db.sql</find>
       <find>dataSourceInitializer</find>
       <find>rajeevkumarsingh</find>
+      <find>dele</find>
+      <find>int</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Playground\SpringMVCBasic\src\main</dir>
@@ -275,23 +273,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/scss/style.scss" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/article/view.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/ArticleResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/CommentResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/ArticleDetailResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/CreateUpdateArticleResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/FormResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/dao/ArticleDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/validator/ArticleValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/RoleName.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Role.java" />
@@ -304,12 +291,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserSummary.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/JwtAuthenticationResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleHqlRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/CustomUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/AuthController.java" />
@@ -321,11 +305,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/MvcWebApplicationInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/default-roles.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/PersistenceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/ErrorCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/ApiResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/ResponseStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleDetailResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/CommentResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/FormResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/validator/ArticleValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java" />
       </list>
     </option>
   </component>
@@ -365,10 +363,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="171" />
+    <option name="y" value="168" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -376,6 +374,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -463,24 +462,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springmvc" type="462c0819:PsiDirectoryNode" />
-              <item name="payload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCBasic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCBasic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springmvc" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCBasic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCBasic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springmvc" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -503,7 +484,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -654,6 +634,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.32897604" />
@@ -661,15 +642,14 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50159913" side_tool="true" weight="0.26906317" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32942432" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021322" side_tool="true" weight="0.31045753" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.46747354" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.31045753" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.31045753" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.22441365" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.22814499" />
       <window_info id="Structure" order="1" sideWeight="0.50108933" side_tool="true" weight="0.21748401" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -681,6 +661,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -692,158 +673,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/exception/BadRequestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/exception/ResourceNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.4.RELEASE/spring-security-core-5.0.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleHqlRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleHqlRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/response/FormResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/CurrentUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserIdentityAvailability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/SignUpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/JwtAuthenticationResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>
@@ -854,37 +687,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/RoleName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/UserDateAudit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/DateAudit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/UserDateAudit.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/audit/DateAudit.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -892,13 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/AuditingConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/AuditingConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -910,20 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -962,23 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/SecurityWebApplicationInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -986,39 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/default-roles.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1996#1997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,6 +787,269 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/RoleName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/exception/AppException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ApiResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/JwtAuthenticationResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/request/LoginRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/request/SignUpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserIdentityAvailability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/UserSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/ResponseStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleDetailResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2067#2068#0" expanded="true" />
+            <element signature="e#2113#2114#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2259#2260#0" expanded="true" />
+            <element signature="e#2307#2308#0" expanded="true" />
+            <element signature="e#2755#2756#0" expanded="true" />
+            <element signature="e#2788#2789#0" expanded="true" />
+            <element signature="e#2829#2830#0" expanded="true" />
+            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2941#2942#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3215#3216#0" expanded="true" />
+            <element signature="e#3254#3255#0" expanded="true" />
+            <element signature="e#3293#3294#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/ArticleResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1251#1252#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1662#1663#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/CommentResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1496#1497#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/response/FormResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/validator/ArticleValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="51" column="49" lean-forward="true" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestAuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1059,10 +1060,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/payload/ApiResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/RoleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.0.8.RELEASE/spring-data-jpa-2.0.8.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/repository/ArticleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1889#1890#0" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1169">
+          <caret line="77" column="37" lean-forward="true" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1944#1945#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/CurrentUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/service/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/JwtAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/model/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1557#1558#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
+            <element signature="e#1985#1986#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/security/UserPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mitrais/springmvc/controller/rest/RestArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4475#4491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

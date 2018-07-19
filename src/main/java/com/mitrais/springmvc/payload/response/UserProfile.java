@@ -1,4 +1,4 @@
-package com.mitrais.springmvc.payload;
+package com.mitrais.springmvc.payload.response;
 
 import java.time.Instant;
 

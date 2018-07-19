@@ -1,4 +1,4 @@
-package com.mitrais.springmvc.payload;
+package com.mitrais.springmvc.payload.request;
 
 import javax.validation.constraints.NotBlank;
 

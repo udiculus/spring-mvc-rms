@@ -2,9 +2,9 @@ package com.mitrais.springmvc.controller;
 
 import com.mitrais.springmvc.exception.ResourceNotFoundException;
 import com.mitrais.springmvc.model.User;
-import com.mitrais.springmvc.payload.UserIdentityAvailability;
-import com.mitrais.springmvc.payload.UserProfile;
-import com.mitrais.springmvc.payload.UserSummary;
+import com.mitrais.springmvc.payload.response.UserIdentityAvailability;
+import com.mitrais.springmvc.payload.response.UserProfile;
+import com.mitrais.springmvc.payload.response.UserSummary;
 import com.mitrais.springmvc.repository.UserRepository;
 import com.mitrais.springmvc.security.CurrentUser;
 import com.mitrais.springmvc.security.UserPrincipal;

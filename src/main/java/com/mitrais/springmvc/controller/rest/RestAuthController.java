@@ -1,13 +1,14 @@
 package com.mitrais.springmvc.controller.rest;
 
 import com.mitrais.springmvc.exception.AppException;
+import com.mitrais.springmvc.model.ResponseStatus;
 import com.mitrais.springmvc.model.Role;
 import com.mitrais.springmvc.model.RoleName;
 import com.mitrais.springmvc.model.User;
-import com.mitrais.springmvc.payload.ApiResponse;
-import com.mitrais.springmvc.payload.JwtAuthenticationResponse;
-import com.mitrais.springmvc.payload.LoginRequest;
-import com.mitrais.springmvc.payload.SignUpRequest;
+import com.mitrais.springmvc.payload.response.ApiResponse;
+import com.mitrais.springmvc.payload.response.JwtAuthenticationResponse;
+import com.mitrais.springmvc.payload.request.LoginRequest;
+import com.mitrais.springmvc.payload.request.SignUpRequest;
 import com.mitrais.springmvc.repository.RoleRepository;
 import com.mitrais.springmvc.repository.UserRepository;
 import com.mitrais.springmvc.security.JwtTokenProvider;
@@ -67,12 +68,12 @@ public class RestAuthController {
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
         if(userRepository.existsByUsername(signUpRequest.getUsername())) {
-            return new ResponseEntity(new ApiResponse(false, "Username is already taken!"),
+            return new ResponseEntity(new ApiResponse(ResponseStatus.ERROR, "Username is already taken!"),
                     HttpStatus.BAD_REQUEST);
         }
 
         if(userRepository.existsByEmail(signUpRequest.getEmail())) {
-            return new ResponseEntity(new ApiResponse(false, "Email Address already in use!"),
+            return new ResponseEntity(new ApiResponse(ResponseStatus.ERROR, "Email Address already in use!"),
                     HttpStatus.BAD_REQUEST);
         }
 
@@ -93,6 +94,6 @@ public class RestAuthController {
                 .fromCurrentContextPath().path("/users/{username}")
                 .buildAndExpand(result.getUsername()).toUri();
 
-        return ResponseEntity.created(location).body(new ApiResponse(true, "User registered successfully"));
+        return ResponseEntity.created(location).body(new ApiResponse(ResponseStatus.SUCCESS, "User registered successfully"));
     }
 }

@@ -1,4 +1,4 @@
-package com.mitrais.springmvc.payload;
+package com.mitrais.springmvc.payload.response;
 
 public class UserIdentityAvailability {
     private Boolean available;
