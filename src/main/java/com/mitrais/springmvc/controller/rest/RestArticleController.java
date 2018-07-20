@@ -2,6 +2,7 @@ package com.mitrais.springmvc.controller.rest;
 
 import com.mitrais.springmvc.model.Article;
 import com.mitrais.springmvc.model.Comment;
+import com.mitrais.springmvc.model.ResponseStatus;
 import com.mitrais.springmvc.payload.response.ArticleDetailResponse;
 import com.mitrais.springmvc.payload.response.ArticleResponse;
 import com.mitrais.springmvc.payload.response.FormResponse;
@@ -40,7 +41,6 @@ public class RestArticleController {
         ArticleResponse response = new ArticleResponse();
         response.setData(articlesData);
         response.setMessage("Ok");
-
         return response;
     }
 
@@ -79,17 +79,16 @@ public class RestArticleController {
         if (!result.hasErrors()) {
             article.setUserId(currentUser.getId());
             articleService.save(article);
-            response.setErrorcode(0);
+            response.setStatus(ResponseStatus.SUCCESS);
             response.setMessage("Ok");
-            System.out.println("Successfully created the article...");
+            System.out.println("Successfully created the article");
         } else {
             HashMap<String, String> formError = new HashMap<String, String>();
-            System.out.println("Failed to update the article...");
             for (FieldError errors : result.getFieldErrors()) {
                 formError.put(errors.getField(), errors.getDefaultMessage());
             }
-            response.setMessage("Failed");
-            response.setErrorcode(1000);
+            response.setMessage("Failed to create the article");
+            response.setStatus(ResponseStatus.FORM_ERROR);
             response.setFormError(formError);
         }
 
@@ -105,16 +104,15 @@ public class RestArticleController {
 
         if (!result.hasErrors()) {
             articleService.update(article);
-            response.setMessage("Ok");
-            System.out.println("Successfully updated the article...");
+            response.setMessage("Successfully update the article");
         } else {
             HashMap<String, String> formError = new HashMap<String, String>();
-            System.out.println("Failed to update the article...");
+            System.out.println("Failed to update the article");
             for (FieldError errors : result.getFieldErrors()) {
                 formError.put(errors.getField(), errors.getDefaultMessage());
             }
-            response.setMessage("Failed");
-            response.setErrorcode(1000);
+            response.setMessage("Please check again your input");
+            response.setStatus(ResponseStatus.FORM_ERROR);
             response.setFormError(formError);
         }
 
@@ -126,11 +124,13 @@ public class RestArticleController {
         FormResponse response = new FormResponse();
         Article article = articleService.get(id);
         if (article != null) {
+            System.out.println("Selected Article ID : " +  id);
             articleService.delete(id);
+            response.setMessage("Article has been deleted");
+        } else {
+            response.setMessage("Article not found or already deleted");
+            response.setStatus(ResponseStatus.FAILED);
         }
-
-        response.setMessage("Ok");
-        System.out.println("Successfully deleted the article...");
 
         return response;
     }

@@ -4,5 +4,5 @@ public enum ResponseStatus {
     SUCCESS,
     FORM_ERROR,
     AUTHORIZATION_REQUIRED,
-    ERROR
+    FAILED
 }

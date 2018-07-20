@@ -55,7 +55,7 @@ public class ArticleServiceImpl implements ArticleService{
 
     @Transactional
     public void delete(int id) {
-        articleRepository.deleteById(id);
+        articleRepository.deleteByArticleId(id);
     }
 
 }

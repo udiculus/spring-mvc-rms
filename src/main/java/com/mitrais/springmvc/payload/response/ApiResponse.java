@@ -1,22 +1,34 @@
 package com.mitrais.springmvc.payload.response;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.mitrais.springmvc.model.ResponseStatus;
 
 public class ApiResponse {
-    private ResponseStatus status;
-    private String message;
+
+    @SerializedName("status")
+    @Expose
+    protected ResponseStatus status;
+
+    @SerializedName("message")
+    @Expose
+    protected String message;
+
+    public ApiResponse() {
+        this.status = ResponseStatus.SUCCESS;
+    }
 
     public ApiResponse(ResponseStatus errorcode, String message) {
         this.status = errorcode;
         this.message = message;
     }
 
-    public ResponseStatus getErrorcode() {
+    public ResponseStatus getStatus() {
         return status;
     }
 
-    public void setErrorcode(ResponseStatus errorcode) {
-        this.status = errorcode;
+    public void setStatus(ResponseStatus status) {
+        this.status = status;
     }
 
     public String getMessage() {

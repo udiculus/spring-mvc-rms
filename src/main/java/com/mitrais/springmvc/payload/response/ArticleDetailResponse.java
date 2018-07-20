@@ -3,37 +3,14 @@ package com.mitrais.springmvc.payload.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.HashMap;
 import java.util.List;
 
-public class ArticleDetailResponse {
+public class ArticleDetailResponse extends ApiResponse {
 
-    public ArticleDetailResponse() {
-    }
-
-    @SerializedName("errorcode")
-    @Expose
-    private int errorcode;
-
-    @SerializedName("message")
-    @Expose
-    private String message;
 
     @SerializedName("data")
     @Expose
     private Data data;
-
-    @SerializedName("form_error")
-    @Expose
-    private HashMap<String, String> formError;
-
-    public int getErrorcode() {
-        return errorcode;
-    }
-
-    public void setErrorcode(int errorcode) {
-        this.errorcode = errorcode;
-    }
 
     public String getMessage() {
         return message;
@@ -41,14 +18,6 @@ public class ArticleDetailResponse {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public HashMap<String, String> getFormError() {
-        return formError;
-    }
-
-    public void setFormError(HashMap<String, String> formError) {
-        this.formError = formError;
     }
 
     public Data getData() {
